@@ -1,0 +1,317 @@
+/* ---------- FONTS ----------
+   Pixel Operator HB is a free font that is NOT on Google Fonts.
+   Download it, then put the font files in a "fonts" folder.
+   The title uses the "HB 8" version, everything else uses the regular one. */
+
+@font-face {
+  font-family: "Pixel Operator HB";
+  src: url("fonts/PixelOperatorHB.ttf");
+}
+
+@font-face {
+  font-family: "Pixel Operator HB 8";
+  src: url("fonts/PixelOperatorHB8.ttf");
+}
+
+
+/* ---------- PAGE ---------- */
+
+body {
+  /* Colors from the Figma design */
+  --page-blue: #3A87CE;
+  --panel-navy: #113675;
+  --banner-blue: #3A7AE8;
+  --button-white: #F0F6FF;
+  --warning-yellow: #BBFF00;
+  --phone-red: #ED1B24;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* The page is a row that wraps: the header takes the whole first row,
+     then the sidebar and main content sit side by side below it. */
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 21px 20px 21px 25px;
+  background-color: var(--page-blue);
+  color: var(--white);
+  font-family: "Pixel Operator HB", monospace;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  width: 100%;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 1185px;
+  height: 100px;
+  margin: 0;
+  padding-left: 23px;
+  background-color: var(--panel-navy);
+  border-radius: 20px 20px 20px 0;
+  font-family: "Pixel Operator HB 8", monospace;
+  font-size: 32px;
+  font-weight: normal;
+  text-shadow: 8px 6px 0 rgba(0, 0, 0, 0.63);
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar {
+  box-sizing: border-box;
+  width: 253px;
+  padding: 3px 22px 40px 23px;
+  background-color: var(--panel-navy);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  height: 30px;
+  background-color: var(--button-white);
+  border-radius: 20px;
+  color: var(--black);
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sidebar-notice {
+  margin: 39px 0 0 0;
+  color: var(--warning-yellow);
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.sidebar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.group-hotline {
+  margin-top: 10px;
+}
+
+.group-fbi {
+  margin-top: 20px;
+}
+
+.sidebar-text {
+  margin: 0;
+}
+
+.sidebar-link {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.phone-number {
+  color: var(--phone-red);
+}
+
+.ncmec-image {
+  display: block;
+  width: 208px;
+  height: 131px;
+  object-fit: cover;
+}
+
+.fbi-image {
+  display: block;
+  width: 162px;
+  height: 167px;
+  object-fit: cover;
+}
+
+
+/* ---------- MAIN AREA ---------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  margin-top: 26px;
+  margin-left: 25px;
+}
+
+
+/* ---------- FIRST BLACK DASHBOARD (intro) ---------- */
+
+.intro-dashboard {
+  box-sizing: border-box;
+  height: 284px;
+  padding: 6px 16px 0 16px;
+  background-color: var(--black);
+  box-shadow: 8px 8px 8px -2px rgba(0, 0, 0, 0.41);
+}
+
+.dashboard-title {
+  margin: 0 0 14px 0;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.intro-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* White "post" boxes */
+.post {
+  box-sizing: border-box;
+  height: 215px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.post-one {
+  width: 624px;
+}
+
+.post-two {
+  width: 277px;
+  border: 2px solid var(--black);
+}
+
+.post-banner {
+  height: 31px;
+  background-color: var(--banner-blue);
+}
+
+/* The second banner covers the black border, like in the design */
+.post-banner-two {
+  height: 32px;
+  margin: -2px -2px 0 -2px;
+}
+
+.post-banner-title {
+  margin: 0;
+  padding: 3px 12px 0 12px;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.post-body {
+  padding: 13px 20px 0 6px;
+}
+
+.post-text {
+  margin: 0 0 20px 0;
+}
+
+.post-text-two {
+  margin: 11px 12px 0 12px;
+}
+
+.big-word {
+  font-size: 24px;
+  font-style: normal;
+}
+
+.phone-image {
+  width: 103px;
+  height: 191px;
+  margin: 2px 0 0 -24px;
+  transform: rotate(9.25deg);
+}
+
+.gradient-bar {
+  width: 51px;
+  height: 215px;
+  margin-left: 27px;
+  background: linear-gradient(to top, #9AC4FF 0%, #0084FF 20.673%, #113675 51.923%, #042242 92.308%);
+}
+
+.post-two {
+  margin-left: 19px;
+}
+
+
+/* ---------- SECOND BLACK DASHBOARD (quote) ---------- */
+
+.quote-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.quote-box {
+  box-sizing: border-box;
+  width: 869px;
+  height: 228px;
+  padding: 17px 15px 0 0;
+  background-color: var(--black);
+  box-shadow: 8px 7px 4px 0 rgba(0, 0, 0, 0.36);
+  text-align: center;
+}
+
+.quote-link {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.quote-intro {
+  margin: 0 0 33px 0;
+  font-size: 24px;
+  line-height: 27px;
+}
+
+.quote-text {
+  margin: 0;
+  font-size: 32px;
+  line-height: 35px;
+}
+
+/* The camera overlaps the right edge of the black box */
+.camera-image {
+  width: 263px;
+  height: 205px;
+  margin: 17px 0 0 -15px;
+  object-fit: cover;
+}
+
+
+/* ---------- KEYBOARD PHOTO ---------- */
+
+.keyboard-image {
+  display: block;
+  width: 100%;
+  height: 295px;
+  object-fit: cover;
+  box-shadow: 6px 4px 4px 0 rgba(0, 0, 0, 0.43);
+}
+
+.nav-link:hover {
+    background-color: #3A87CE;
+    color: #F0F6FF;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.441);
+}
