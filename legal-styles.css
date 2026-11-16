@@ -1,0 +1,131 @@
+/* ---------- LEGAL PAGE ----------
+   This file only holds the styles that are NEW on the Legal page.
+   The header, sidebar, fonts, and page colors come from styles.css,
+   so legal.html links to both files (styles.css first). */
+
+body {
+  /* Extra colors from the Figma design for this page */
+  --header-cyan: #6CC9E8;
+  --quote-orange: #F39A1E;
+  --link-red: #ED1B24;
+  --number-blue: #0066CC;
+  --photo-border: #3A9BFF;
+}
+
+
+/* ---------- BLACK DASHBOARD ---------- */
+
+.legal-dashboard {
+  box-sizing: border-box;
+  padding: 10px 10px 20px 10px;
+  background-color: var(--black);
+  box-shadow: 8px 8px 8px -2px rgba(0, 0, 0, 0.41);
+}
+
+.legal-title {
+  margin: 0 0 14px 0;
+  padding-left: 8px;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+/* Two columns side by side */
+.legal-row {
+  display: flex;
+  gap: 18px;
+}
+
+.legal-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.legal-right {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  width: 426px;
+}
+
+
+/* ---------- WHITE BOXES ---------- */
+
+.legal-box {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.legal-box-header {
+  margin: 0;
+  padding: 4px 12px;
+  background-color: var(--header-cyan);
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.legal-box-body {
+  padding: 12px 12px 8px 12px;
+}
+
+.legal-text {
+  margin: 0 0 20px 0;
+}
+
+
+/* ---------- COLORED TEXT ---------- */
+
+.legal-red {
+  color: var(--link-red);
+}
+
+.legal-blue {
+  color: var(--number-blue);
+}
+
+
+/* ---------- BULLET LIST (Renewed Hope box) ---------- */
+
+.legal-list {
+  margin: 0 0 14px 0;
+  padding-left: 24px;
+}
+
+.legal-list-item {
+  margin-bottom: 4px;
+}
+
+
+/* ---------- ORANGE QUOTE ---------- */
+
+.legal-quote {
+  padding: 14px 20px;
+  background-color: var(--quote-orange);
+  color: var(--white);
+}
+
+.legal-quote-text {
+  margin: 0 0 14px 0;
+}
+
+
+/* ---------- RIGHT COLUMN IMAGES ---------- */
+
+.legal-photo {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 184px;
+  border: 3px solid var(--photo-border);
+  object-fit: cover;
+}
+
+.legal-ruling {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}

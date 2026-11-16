@@ -1,0 +1,410 @@
+/* ---------- FONTS ----------
+   Pixel Operator HB is a free font that is NOT on Google Fonts.
+   Download it, then put the font files in a "fonts" folder.
+   The title uses the "HB 8" version, everything else uses the regular one. */
+
+@font-face {
+  font-family: "Pixel Operator HB";
+  src: url("fonts/PixelOperatorHB.ttf");
+}
+
+@font-face {
+  font-family: "Pixel Operator HB 8";
+  src: url("fonts/PixelOperatorHB8.ttf");
+}
+
+
+/* ---------- PAGE ---------- */
+
+body {
+  /* Colors from the Figma design */
+  --page-blue: #3A87CE;
+  --panel-navy: #113675;
+  --banner-blue: #3A7AE8;
+  --button-white: #F0F6FF;
+  --warning-yellow: #BBFF00;
+  --phone-red: #ED1B24;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* Colors used only on the media page (estimated from the screenshot,
+     check them against Figma and swap in the exact hex codes) */
+  --banner-green: #5CC83C;
+  --text-green: #2E9E2F;
+  --text-blue: #1B6FE0;
+  --text-purple: #8A2BE2;
+  --quote-orange: #F28C28;
+
+  /* The page is a row that wraps: the header takes the whole first row,
+     then the sidebar and main content sit side by side below it. */
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 21px 20px 21px 25px;
+  background-color: var(--page-blue);
+  color: var(--white);
+  font-family: "Pixel Operator HB", monospace;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  width: 100%;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 1185px;
+  height: 100px;
+  margin: 0;
+  padding-left: 23px;
+  background-color: var(--panel-navy);
+  border-radius: 20px 20px 20px 0;
+  font-family: "Pixel Operator HB 8", monospace;
+  font-size: 32px;
+  font-weight: normal;
+  text-shadow: 8px 6px 0 rgba(0, 0, 0, 0.63);
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar {
+  box-sizing: border-box;
+  width: 253px;
+  padding: 3px 22px 40px 23px;
+  background-color: var(--panel-navy);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  height: 30px;
+  background-color: var(--button-white);
+  border-radius: 20px;
+  color: var(--black);
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: var(--page-blue);
+  color: var(--button-white);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.677);
+}
+
+.sidebar-notice {
+  margin: 39px 0 0 0;
+  color: var(--warning-yellow);
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.sidebar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.group-hotline {
+  margin-top: 10px;
+}
+
+.group-fbi {
+  margin-top: 20px;
+}
+
+.sidebar-text {
+  margin: 0;
+}
+
+.sidebar-link {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.phone-number {
+  color: var(--phone-red);
+}
+
+.ncmec-image {
+  display: block;
+  width: 208px;
+  height: 131px;
+  object-fit: cover;
+}
+
+.fbi-image {
+  display: block;
+  width: 162px;
+  height: 167px;
+  object-fit: cover;
+}
+
+
+/* ---------- MAIN AREA (one big black panel) ---------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  flex: 1;
+  margin: 26px 0 0 25px;
+  padding: 22px 15px 76px 15px;
+  background-color: var(--black);
+  box-shadow: 8px 8px 8px -2px rgba(0, 0, 0, 0.41);
+}
+
+.main-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+
+/* ---------- SHARED WHITE BOXES ---------- */
+
+/* The green bar at the top of every white box */
+.box-banner {
+  box-sizing: border-box;
+  height: 31px;
+  margin: 0;
+  padding: 0 12px;
+  background-color: var(--banner-green);
+  color: var(--black);
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 31px;
+}
+
+.box-body {
+  padding: 12px 12px 0 12px;
+}
+
+.box-text {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+/* Colored words inside the paragraphs */
+.green-word {
+  color: var(--text-green);
+  font-style: normal;
+}
+
+.red-word {
+  color: var(--phone-red);
+  font-style: normal;
+}
+
+.blue-word {
+  color: var(--text-blue);
+  font-style: normal;
+}
+
+.purple-word {
+  color: var(--text-purple);
+  font-style: normal;
+}
+
+
+/* ---------- ROW 1: THE SHOW ---------- */
+
+.show-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.show-poster {
+  width: 240px;
+  height: auto;
+  margin-top: 15px;
+}
+
+.show-box {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex: 1;
+  min-height: 451px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.show-body {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  padding: 14px 12px 14px 12px;
+}
+
+.show-text {
+  width: 470px;
+}
+
+/* The paragraph above the quote has 16px of space under it, so the quote
+   gets 8px on top and 24px on the bottom to leave 24px on both sides. */
+.quote-text {
+  width: 360px;
+  margin: 8px auto 24px auto;
+  color: var(--quote-orange);
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+}
+
+/* auto margins on the left and right center the book in the space
+   next to the text, and align-self centers it from top to bottom */
+.book-cover {
+  align-self: center;
+  width: 280px;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+/* ---------- ROW 2: FILM ---------- */
+
+.film-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.film-poster {
+  width: 230px;
+  height: auto;
+}
+
+.film-box {
+  box-sizing: border-box;
+  width: 560px;
+  min-height: 290px;
+  margin-left: 20px;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.predators-poster {
+  width: 230px;
+  height: auto;
+  margin: 0 2px 0 auto;
+}
+
+
+/* ---------- ROW 3: VIEWERS, PRED-CATCHERS, CONTENT CREATORS ---------- */
+
+.lower-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Left column: Viewers */
+.viewers-box {
+  box-sizing: border-box;
+  width: 220px;
+  min-height: 610px;
+  background-color: var(--white);
+  color: var(--black);
+  text-align: center;
+}
+
+.viewers-body {
+  padding: 12px 8px 0 8px;
+}
+
+.viewer-text {
+  margin: 0 0 24px 0;
+  line-height: 26px;
+}
+
+/* Middle column: two stacked white boxes */
+.middle-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 375px;
+  margin-left: 24px;
+}
+
+.info-box {
+  box-sizing: border-box;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.info-box-one {
+  min-height: 336px;
+}
+
+.info-box-two {
+  min-height: 258px;
+}
+
+/* Right column: pixel icons, table, and video */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  width: 439px;
+  margin-left: 22px;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pixel-person {
+  width: 90px;
+  height: auto;
+}
+
+.globe-icon {
+  width: 80px;
+  height: auto;
+}
+
+.pixel-guard {
+  width: 100px;
+  height: auto;
+}
+
+.comparison-table {
+  display: block;
+  width: 439px;
+  height: auto;
+  margin-top: 12px;
+}
+
+.video-image {
+  display: block;
+  width: 439px;
+  height: auto;
+  margin-top: 30px;
+}

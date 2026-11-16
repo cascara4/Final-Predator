@@ -1,0 +1,327 @@
+/* ---------- FONTS ----------
+   Pixel Operator HB is a free font that is NOT on Google Fonts.
+   Download it, then put the font files in a "fonts" folder.
+   The title uses the "HB 8" version, everything else uses the regular one. */
+
+@font-face {
+  font-family: "Pixel Operator HB";
+  src: url("fonts/PixelOperatorHB.ttf");
+}
+
+@font-face {
+  font-family: "Pixel Operator HB 8";
+  src: url("fonts/PixelOperatorHB8.ttf");
+}
+
+
+/* ---------- PAGE ---------- */
+
+body {
+  /* Colors from the Figma design */
+  --page-blue: #3A87CE;
+  --panel-navy: #113675;
+  --banner-blue: #3A7AE8;
+  --banner-teal: #5BBBA6;
+  --button-white: #F0F6FF;
+  --warning-yellow: #BBFF00;
+  --phone-red: #ED1B24;
+  --text-purple: #B06CF5;
+  --text-blue: #2A7FE0;
+  --text-orange: #E8A200;
+  --text-green: #4DB300;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* The page is a row that wraps: the header takes the whole first row,
+     then the sidebar and main content sit side by side below it. */
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 21px 20px 21px 25px;
+  background-color: var(--page-blue);
+  color: var(--white);
+  font-family: "Pixel Operator HB", monospace;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  width: 100%;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 1185px;
+  height: 100px;
+  margin: 0;
+  padding-left: 23px;
+  background-color: var(--panel-navy);
+  border-radius: 20px 20px 20px 0;
+  font-family: "Pixel Operator HB 8", monospace;
+  font-size: 32px;
+  font-weight: normal;
+  text-shadow: 8px 6px 0 rgba(0, 0, 0, 0.63);
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar {
+  box-sizing: border-box;
+  width: 253px;
+  padding: 3px 22px 40px 23px;
+  background-color: var(--panel-navy);
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  height: 30px;
+  background-color: var(--button-white);
+  border-radius: 20px;
+  color: var(--black);
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #3A87CE;
+  color: #F0F6FF;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.677);
+}
+
+.sidebar-notice {
+  margin: 39px 0 0 0;
+  color: var(--warning-yellow);
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.sidebar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 17px;
+}
+
+.group-hotline {
+  margin-top: 10px;
+}
+
+.group-fbi {
+  margin-top: 20px;
+}
+
+.sidebar-text {
+  margin: 0;
+}
+
+.sidebar-link {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.phone-number {
+  color: var(--phone-red);
+}
+
+.ncmec-image {
+  display: block;
+  width: 208px;
+  height: 131px;
+  object-fit: cover;
+}
+
+.fbi-image {
+  display: block;
+  width: 162px;
+  height: 167px;
+  object-fit: cover;
+}
+
+
+/* ---------- MAIN AREA ---------- */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: 26px;
+  margin-left: 25px;
+}
+
+/* One big black box that holds every card on the About page */
+.about-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: var(--black);
+  box-shadow: 8px 8px 8px -2px rgba(0, 0, 0, 0.41);
+}
+
+
+/* ---------- CARDS (shared by all three white boxes) ---------- */
+
+.card {
+  box-sizing: border-box;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.card-banner {
+  height: 38px;
+  background-color: var(--banner-teal);
+}
+
+.card-banner-title {
+  margin: 0;
+  padding: 9px 12px 0 12px;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.card-text {
+  margin: 0 0 20px 0;
+}
+
+
+/* ---------- TOP ROW: INTRO CARD + WHY COLUMN ---------- */
+
+.about-row {
+  display: flex;
+  gap: 18px;
+}
+
+/* Left card: "Hi, I'm SAM" */
+.intro-card {
+  width: 521px;
+  height: 428px;
+}
+
+.intro-name {
+  margin: 14px 0 0 0;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 40px;
+  text-align: center;
+}
+
+.intro-body {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+  padding: 0 12px 0 20px;
+}
+
+.profile-image {
+  display: block;
+  width: 160px;
+  height: 250px;
+  border: 4px solid var(--text-blue);
+  border-radius: 20px;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+.intro-text {
+  flex: 1;
+  padding-top: 8px;
+}
+
+/* Right column: the "Why" card on top, the two old-computer windows below */
+.why-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 428px;
+}
+
+.why-card {
+  height: 250px;
+}
+
+.why-text {
+  margin: 14px 12px 0 12px;
+}
+
+.window-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.dialing-image {
+  display: block;
+  width: 325px;
+  height: 162px;
+  object-fit: cover;
+}
+
+.message-image {
+  display: block;
+  width: 196px;
+  height: 162px;
+  object-fit: cover;
+}
+
+
+/* ---------- COLORED WORDS IN THE INTRO ---------- */
+
+.color-purple {
+  color: var(--text-purple);
+  font-style: normal;
+}
+
+.color-blue {
+  color: var(--text-blue);
+  font-style: normal;
+}
+
+.color-orange {
+  color: var(--text-orange);
+  font-style: normal;
+}
+
+.color-green {
+  color: var(--text-green);
+  font-style: normal;
+}
+
+
+/* ---------- SOURCES CARD ---------- */
+
+.sources-body {
+  padding: 18px 16px 8px 16px;
+}
+
+.source {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  line-height: 16px;
+  overflow-wrap: anywhere;
+}
